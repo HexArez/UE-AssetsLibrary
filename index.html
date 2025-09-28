@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Asset Library</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="fixed-header">
+    <div class="header-content">
+      <div class="header-title">📦 Asset Library</div>
+      <div class="header-search">
+        <input id="search" type="text" class="form-control" placeholder="Search file..." oninput="loadFiles()">
+      </div>
+      <div id="file-counter"></div>
+      <div class="header-btn">
+        <button class="btn btn-primary" onclick="scan()">Scan Folder</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <div id="list" class="row"></div>
+  </div>
+
+  <!-- Modal for editing description -->
+  <div id="modal">
+    <div class="modal-content">
+      <h3>Edit URL</h3>
+      <input id="modal-input" type="text" />
+      <div class="modal-actions">
+        <button id="modal-cancel">Cancel</button>
+        <button id="modal-ok">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="btn-top" title="Go to top">
+    ↑
+  </button>
+
+  <script src="renderer.js"></script>
+</body>
+
+</html>
